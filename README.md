@@ -146,3 +146,8 @@ Este projeto é perfeito para:
 **Versão Atual**: 2.0 - Ultra-Simples  
 **Compatibilidade**: Python 3.6+, OpenCV 4.0+  
 
+## 👨‍💻 Autor
+
+-   **Pietro Medeiros**
+-   **LinkedIn:** [Meu Linkedin](https://www.linkedin.com/in/pietro-medeiros-770bba162/)
+
