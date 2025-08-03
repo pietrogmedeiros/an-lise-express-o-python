@@ -28,7 +28,7 @@ python3 detector_simples.py
 
 ### Detector em Tempo Real
 ```bash
-python3 detector_simples.py
+python3 run_simple.py
 ```
 
 **Controles:**
