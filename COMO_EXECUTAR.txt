@@ -1,0 +1,160 @@
+🎭 SISTEMA DE ANÁLISE DE EXPRESSÕES FACIAIS
+==========================================
+
+📋 GUIA PASSO A PASSO PARA EXECUÇÃO
+
+🔧 PRÉ-REQUISITOS
+-----------------
+- macOS com câmera
+- Python 3.8 ou superior
+- Terminal/Command Line
+
+📦 INSTALAÇÃO DAS DEPENDÊNCIAS
+------------------------------
+
+1. Abra o Terminal
+
+2. Navegue até a pasta do projeto:
+   cd /caminho/para/projeto-reacoes-faciais
+
+3. Instale as dependências ESSENCIAIS:
+   pip3 install numpy opencv-python pandas
+
+   OU se der erro, use:
+   pip install numpy opencv-python pandas
+
+4. (OPCIONAL) Instale TensorFlow para IA avançada:
+   pip3 install tensorflow-macos
+
+   NOTA: O sistema funciona SEM TensorFlow em modo básico
+
+5. Teste se tudo está funcionando:
+   python3 check_dependencies.py
+
+   Deve aparecer:
+   ✅ NumPy [versão] OK
+   ✅ OpenCV [versão] OK  
+   ✅ Pandas [versão] OK
+   ✅ Câmera acessível
+   🎉 Sistema pronto para usar!
+
+🚀 EXECUTANDO O SISTEMA
+-----------------------
+
+### MODO CÂMERA (Detecção em Tempo Real)
+python3 main_simple.py --mode camera
+
+Controles durante execução:
+- 'q' = Sair do programa
+- 's' = Salvar emoção manualmente
+- ESC = Fechar janela
+
+### MODO RELATÓRIO (Ver estatísticas)
+python3 main_simple.py --mode report
+
+Mostra relatório do dia atual com:
+- Emoção dominante
+- Distribuição percentual
+- Total de detecções
+
+🎯 O QUE O SISTEMA FAZ
+---------------------
+
+1. DETECÇÃO EM TEMPO REAL:
+   - Abre a câmera do MacBook
+   - Detecta faces automaticamente
+   - Identifica emoções (simuladas por enquanto)
+   - Salva dados no banco SQLite
+   - Mostra retângulos coloridos nas faces
+   - Exibe emoção e confiança
+
+2. RELATÓRIOS:
+   - Analisa dados salvos
+   - Gera estatísticas diárias
+   - Mostra emoção mais comum
+   - Calcula percentuais
+
+📁 ESTRUTURA DE ARQUIVOS
+-----------------------
+projeto-reacoes-faciais/
+├── main_simple.py              # Programa principal
+├── check_dependencies.py       # Teste das dependências
+├── src/
+│   ├── emotion_detector_minimal.py  # Detector de emoções
+│   ├── data_manager.py              # Gerenciador do banco
+│   └── analyzer_simple.py           # Gerador de relatórios
+└── data/
+    └── emotions.db             # Banco de dados (criado automaticamente)
+
+🔍 SOLUÇÃO DE PROBLEMAS
+----------------------
+
+PROBLEMA: "TensorFlow não encontrado"
+SOLUÇÃO: 
+- IGNORE! O sistema funciona sem TensorFlow
+- Para IA avançada: pip3 install tensorflow-macos
+- Ou continue usando o modo básico
+
+PROBLEMA: "Câmera não acessível"
+SOLUÇÃO: 
+- Verifique se outra aplicação está usando a câmera
+- Feche Zoom, Teams, FaceTime, etc.
+- Reinicie o Terminal
+
+PROBLEMA: "ModuleNotFoundError"
+SOLUÇÃO:
+- Execute: pip3 install [nome-do-módulo]
+- Ou use: python3 -m pip install [nome-do-módulo]
+
+PROBLEMA: "Permission denied"
+SOLUÇÃO:
+- Permita acesso à câmera nas Configurações do macOS
+- Sistema > Privacidade > Câmera > Terminal
+
+PROBLEMA: Erro de importação do OpenCV
+SOLUÇÃO:
+- pip3 uninstall opencv-python
+- pip3 install opencv-python==4.8.1.78
+
+🎮 COMANDOS RÁPIDOS
+------------------
+
+# Testar dependências
+python3 check_dependencies.py
+
+# Executar detecção
+python3 main_simple.py --mode camera
+
+# Ver relatório
+python3 main_simple.py --mode report
+
+# Ajuda
+python3 main_simple.py --help
+
+📊 EXEMPLO DE USO
+----------------
+
+1. Execute: python3 check_dependencies.py
+2. Execute: python3 main_simple.py --mode camera
+3. Posicione-se na frente da câmera
+4. Veja as emoções sendo detectadas em tempo real
+5. Pressione 'q' para sair
+6. Execute: python3 main_simple.py --mode report
+7. Veja as estatísticas do que foi detectado
+
+🔮 PRÓXIMAS FUNCIONALIDADES
+--------------------------
+- Detecção real de emoções com IA (TensorFlow)
+- Dashboard web interativo
+- Relatórios por período
+- Exportação de dados
+- Análise de padrões emocionais
+
+📞 SUPORTE
+----------
+Se encontrar problemas:
+1. Execute python3 check_dependencies.py primeiro
+2. Verifique se todas as dependências estão OK
+3. TensorFlow é OPCIONAL - sistema funciona sem ele
+
+🎉 DIVIRTA-SE EXPLORANDO SUAS EMOÇÕES!
